@@ -20,6 +20,8 @@
     <li>2.2.<a href="./e2_2_importar/importar.php">Atletic de Madrit</a></li>
     <li>3.1.<a href="./e3_1_objectes/plantt/public/plantilla.php">Objectes Player-Team</a></li>
     <li>3.2.<a href="./e3_2_objectes_heretar/public/plantilla.php">Objectes Heretar</a></li>
+    <li>prova BD<a href="./provaBD/public/provaBD.php"></a></li>
+
 
 </ul>
 </body>
