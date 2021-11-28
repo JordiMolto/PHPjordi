@@ -1,82 +1,59 @@
 <?php
 
-$noms = ['Rodrigo', 'Jordi', 'Pablo', 'Marta', 'Saúl', 'Sara', 'Raúl', 'Xavi', 'Pedro', 'Sandra', 'Yolanda', 'Adrián'];
-$noms_ordenada = $noms;
-
-function mostrar_array($array): String
-{
-    $cadena = "<ul>";
-    foreach ($array as $persones) {
-        $cadena .= "<li>$persones</li>";
+    // Array de 7 noms:
+    $noms = array("Mauro", "Jordi", "Paula", "Sara", "Juan", "Saul", "Domingo");
+    echo "Numero de noms que hi ha en el array: ".count($noms);
+    echo "<br>";
+    echo "<br>";
+    echo "Array separat per separació: ".implode(" ",$noms);
+    echo "<br>";
+    echo "<br>";
+    echo "Ordenat alfabèticament: "."<br>";
+    echo asort($noms);
+    foreach($noms as $x)
+    {
+    echo "Nom=" . $x;
+    echo "<br>";
     }
-    return $cadena . "</ul>";
-}
-
-echo 'Numero de Noms en el array: ' . count($noms) . '<br/><br/>';
-echo 'Array separat per un espai: ' . implode(' ', $noms) . '<br/><br/>';
-asort($noms_ordenada);
-echo 'Ordenat alfabeticament: ' . mostrar_array($noms_ordenada);
-echo 'Ordenat a la inversa: ' . mostrar_array(array_reverse($noms));
-echo 'El meu nom (Jordi) està a la posició: ' . array_search('Jordi', $noms) . '<br/><br/>';
-
-/* Alumnes */
-
-$alumnes = [
-    [
-        'dni' => '2412412324',
-        'nom' => 'Sergio Hernandez',
-        'edat' => '20'
-    ],
-    [
-        'dni' => '6785685678',
-        'nom' => 'Kevin San Juan',
-        'edat' => '49'
-    ],
-];
-
-?>
-
-<table>
-    <caption>Alumnes</caption>
-    <?php foreach ($alumnes as $key => $alumne) :
-        if ($key == 0) :
-            $indices = array_keys($alumne);
+    echo "<br>";
+    echo "Array ordenat alrevés: ". array_reverse($noms);
+    echo "<br>";
+    echo "<br>";
+    echo "Posició del meu nom en el array: ". array_search("Jordi",$noms);
+    echo "<br>";
+    echo "<br>";
+    echo "Llista del array: "."<br>";
+        /*function mostrar_array($noms)
+    { }*/
+        foreach($noms as $y)
+        {
+        echo "-Nom=" . $y;
+        echo "<br>";
+        }
+    //Crea un array d'alumnes on cada element siga un altre array que continga el dni, nom i edat de l'alumne.
+    $noms = array("Mauro"=>"21806677E", "Jordi"=>"21806674E", "Paula"=>"21806675E", "Sara"=>"21806617E", "Juan"=>"21806687E", "Saul"=>"21806674Y", "Domingo"=>"21806670E");
     ?>
-            <tr>
-                <?php foreach ($indices as $feature) : ?>
-                    <th><?= $feature ?></th>
-                <?php endforeach; ?>
-            </tr>
-        <?php endif; ?>
-        <tr>
-            <?php foreach ($alumne as $value) : ?>
-                <td><?= $value ?></td>
-            <?php endforeach; ?>
-        </tr>
-    <?php endforeach; ?>
+<html>
+<table class="taula">
+    <tr>
+
+    <td>Nom 1</td>
+
+    <td>Nom 2</td>
+
+    <td>Nom 3</td>
+
+    <td>Nom 4</td>
+
+    <td>Nom 5</td>
+
+    <td>Nom 6</td>
+
+    <td>Nom 7</td>
+
+    </tr>
+
 </table>
 
 
-<?php
-
-/* Traduccions */
-
-echo "Array associatiu";
-$traduccions  = array(
-    'House' => 'Casa',
-    'Cat' => 'Gat',
-    'Dog' => 'Gos',
-    'Rabbit' => 'Conill',
-    'Chicken' => 'Pollastre',
-    'Pig' => 'Porc',
-    'Butterfly' => 'Papallona',
-    'Bird' => 'Pardal',
-    'Elephant' => 'Elefant',
-    'Fish' => 'Peix',
-);
-
-foreach ($traduccions as $paraula => $traduccion) {
-    echo "$paraula -> $traduccion <br>";
-}
-echo "</p>";
-?>
+</html>

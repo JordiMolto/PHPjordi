@@ -9,7 +9,9 @@
         }
     ],
     "require": {
-        "filp/whoops": "^2.14"
+        "filp/whoops": "^2.14",
+        "vlucas/phpdotenv": "^5.3",
+        "phpmailer/phpmailer": "^6.5"
     },
     "autoload": {
         "psr-4": {
@@ -17,5 +19,4 @@
         },
         "files": ["myHelpers/myHelpers.php"]
     }
-
 }

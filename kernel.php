@@ -14,5 +14,5 @@
     $route_views = $_SERVER['DOCUMENT_ROOT'].'/../views/';
     $route_src = $_SERVER['DOCUMENT_ROOT'].'/../src/';
     $route_config = $_SERVER['DOCUMENT_ROOT'].'/../config/';
-
+    
 ?>
